@@ -1,8 +1,3 @@
-<script
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-  type="text/javascript">
-</script>
-
 # Первая практическая по методам оптимизации
 ## Задание:
 Решить задачу тремя методами: методом половинного деления,
