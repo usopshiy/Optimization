@@ -8,16 +8,16 @@ import methods.half_div as hd
 
 def print_answer(x, f):
     print(f"{bcolors.OKBLUE}Ответ:{bcolors.ENDC}\n"
-          f"\t {bcolors.OKGREEN}x = {x:.2E}\n"
-          f"\t f(x) = {f(x):.2E}{bcolors.ENDC}\n")
+          f"\t {bcolors.OKGREEN}x = {x}\n"
+          f"\t f(x) = {f(x)}{bcolors.ENDC}\n")
 
 
-functions = [[lambda x: Decimal(0.5) * x ** 2 - Decimal(math.sin(x)),
-              lambda x: x - Decimal(math.cos(x)),
-              lambda x: 1 + Decimal(math.sin(x))]]
-a, b = Decimal(0), Decimal(1)
+functions = [[lambda x: Decimal("0.5") * x ** 2 - Decimal.from_float(math.sin(x)),
+              lambda x: x - Decimal.from_float(math.cos(x)),
+              lambda x: Decimal("1") + Decimal.from_float(math.sin(x))]]
+a, b = Decimal("0"), Decimal("1")
 max_iter = 11  # variant
-accuracy = Decimal(10**(-7))  # variant
+accuracy = Decimal("0.0000001")  # variant
 
 if __name__ == "__main__":
     f, deriv1, deriv2 = functions[0][0], functions[0][1], functions[0][2]

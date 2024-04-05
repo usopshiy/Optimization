@@ -7,7 +7,7 @@ from utils import *
 def solve(f, a, b, accuracy, max_iter: int):
     iter = 0
     fC, fD = 0, 0
-    gr = Decimal((math.sqrt(Decimal(5)) + 1) / 2)  # golden ratio
+    gr = Decimal.from_float((math.sqrt(Decimal(5)) + 1) / 2)  # golden ratio
     # getting first interval
     c = b - (b - a) / gr
     d = a + (b - a) / gr
