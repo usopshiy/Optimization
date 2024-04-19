@@ -1,11 +1,18 @@
 from decimal import *
 
-COLOUMN_SIZE = 9
+COLOUMN_SIZE = 12
 
 
 def print_table_row(row: [Decimal]):
+    for i in row:
+        print(str(round(i, 10)).ljust(COLOUMN_SIZE), end=' | ')
+    print()
+
+
+def print_newton_row(row):
     print(str(row[0]).ljust(COLOUMN_SIZE), end=' | ')
-    for i in range(1, len(row)):
+    print(str(round(float(row[1]), 10)).ljust(COLOUMN_SIZE), end=' | ')
+    for i in range(2, len(row)):
         print("{:.2E}".format(row[i]).ljust(COLOUMN_SIZE), end=' | ')
     print()
 
